@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+
+<div class="loader-container">
+    <div class="loader">Loading...</div>
+  </div>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="vendor/boostrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="vendor/animate.css/animate.min.css">
+    <link rel="stylesheet" href="vendor/image_hover/css/imagehover.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/day-mode.css">
+    <style>
+        .loader-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        z-index: 2000;
+        background-color: #000;
+      }
+      .loader {
+  color: #fff;
+  font-size: 90px;
+  text-indent: -9999em;
+  overflow: hidden;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  margin: 72px auto;
+  position: relative;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: load6 1.7s infinite ease, round 1.7s infinite ease;
+  animation: load6 1.7s infinite ease, round 1.7s infinite ease;
+}
+@-webkit-keyframes load6 {
+  0% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  5%,
+  95% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  10%,
+  59% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+  }
+  20% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+  }
+  38% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+  }
+  100% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+}
+@keyframes load6 {
+  0% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  5%,
+  95% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  10%,
+  59% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+  }
+  20% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em;
+  }
+  38% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em;
+  }
+  100% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+}
+@-webkit-keyframes round {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes round {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+    </style>
+</head>
+<body class="bg-dark">
+
+    <!-- nav -->
+    <nav class="navbar navbar-expand-lg position-fixed top-0 w-100 header wow animate__animated animate__slideInDown">
+        <div class="container">
+          <a class="navbar-brand brand" href="#">
+              <h3 class="mb-0 mb-1">S</h3>
+          </a>
+          <a class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="text-primary menu-icon fa-2x fas fa-bars"></i>
+          </a>
+          <div class="collapse navbar-collapse navbar-container" id="navbarTogglerDemo02">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link home active" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link about" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link services" href="#services">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link skils" href="#skills">Skills</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link portfolio" href="#portfolio">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link blog" href="#blog">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link contact" href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- home -->
+    <section id="home" class="container mb-5 py-md-5 py-lg-3">
+        <div class="row w-100 m-0 flex-column align-items-center justify-content-center mt-5 py-5 py-lg-0">
+            <div class="col-8 col-md-6 col-lg-3 mt-5 mb-4">
+                <div class="d-flex justify-content-center wow animate__animated animate__slideInDown">
+                    <img src="img/photo (2).jpg" class="img-fluid rounded-circle home-profile shadow" alt="">
+                </div>
+            </div>
+            <div class="col-12 col-md-7 wow animate__animated animate__fadeInUp">
+                <div class="text-center">
+                    <p class="change-color-obj hello">Hello</p>
+                    <h2 class="home-title">I'm Swamn Nyi Nyi Zaw</h2>
+                    <h5 class="mb-3 home-job">Web Developer</h5>
+                    <a href="#about">
+                        <button class="btn btn-sm btn-outline-primary change-color-btn">More About Me</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="social d-flex flex-column justify-content-center wow animate__animated animate__zoomIn">
+            <i class="text-primary fab fa-facebook-f mb-3 social-icon" style="font-size: 15px;"></i>
+            <i class="text-primary fab fa-google mb-3 social-icon" style="font-size: 15px;"></i>
+            <i class="text-primary fab fa-twitter mb-3 social-icon" style="font-size: 15px;"></i>
+            <i class="text-primary fab fa-instagram mb-3 social-icon" style="font-size: 15px;"></i>
+        </div>
+    </section>
+
+    <!-- about -->
+    <section id="about" class="container-fluid py-5">
+        <div class="row">
+            <div class="col-12">
+                <div class="container">
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-12 wow animate__animated animate__fadeInDown">
+                            <div class="text-center">
+                                <p class="mb-1 mt-5 change-color-obj about-title">About Me</p>
+                                <h5 class="mb-5 about-intro">Who I am</h5>
+                            </div>
+                        </div>
+                        <div class="col-11 col-md-11 col-lg-4 mt-2 mt-lg-0 wow animate__animated animate__fadeInLeft">
+                            <div class="">
+                                <img src="img/about.jpg" class="img-fluid about-img" alt="">
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-11 col-lg-5 mt-4 mt-lg-0 wow animate__animated animate__fadeInRight">
+                            <div class="">
+                                <p class="about-text" style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio quidem non sint, iure nulla quas perferendis dolorem ab unde! Ad, omnis debitis ullam sint sequi iusto similique <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore temporibus sapiente minima quos eligendi dolorem cumque, aperiar.</p>
+                                <div class="text-center text-md-start">
+                                    <a class="btn btn-outline-primary btn-sm mb-3 mb-lg-0 change-color-btn">Download CV</a>
+                                    <a href="#contact" class="btn btn-primary btn-sm mb-3 mb-lg-0 change-color-solid">Contact Me</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- services -->
+    <section id="services" class="container-fluid mb-5 py-5">
+        <div class="row">
+            <div class="col-12">
+                <div class="container">
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-12">
+                            <div class="text-center wow animate__animated animate__fadeInDown">
+                                <p class="mb-1 mt-5 change-color-obj services-title">Services</p>
+                                <h5 class="mb-5 services-intro">What I offer</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center align-items-center">
+                        <div class="col-12 col-lg-3 mb-4 mb-lg-0 wow animate__animated animate__fadeInDown">
+                            <div id="services-card" class="services-card one shadow">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-center my-3">
+                                        <img src="img/logodesign.svg" class="img-fluid services-img" alt="">
+                                    </div>
+                                    <p class="services-text-title">Logo Design</p>
+                                    <p id="services-text" class="services-text one">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quas unde orum. Iste, dignissimos.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-3 mb-4 mb-lg-0 wow animate__animated animate__fadeInDown">
+                            <div id="services-card" class="services-card two shadow">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-center my-3">
+                                        <img src="img/responsive.svg" class="img-fluid services-img" alt="">
+                                    </div>
+                                    <p class="services-text-title">Responsive</p>
+                                    <p id="services-text" class="services-text two">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quas unde orum. Iste, dignissimos.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-3 mb-4 mb-lg-0 wow animate__animated animate__fadeInDown">
+                            <div id="services-card" class="services-card three shadow">
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-center my-3">
+                                        <img src="img/web-design.svg" class="img-fluid services-img" alt="">
+                                    </div>
+                                    <p class="services-text-title">Web Design</p>
+                                    <p id="services-text" class="services-text three">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores quas unde orum. Iste, dignissimos.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- skills -->
+    <section id="skills" class="container py-5 mb-5">
+        <div class="row">
+            <div class="col-12 wow animate__animated animate__flipInX">
+                <div class="text-center">
+                    <p class="mb-2 mt-5 change-color-obj skills-title">My Skills</p>
+                </div>
+            </div>
+            <div class="col-12 mb-5 d-none d-md-inline-block wow animate__animated animate__flipInX">
+                <div class="text-center">
+                    <h5 class="mb-1 pskill-title">Professional Skills</h5>
+                </div>
+            </div>
+            <div class="row justify-content-center align-items-center mb-0 mb-md-4">
+                <div class="col-md-5 p-skill d-none wow animate__animated animate__slideInLeft d-md-inline-block py-2">
+                    <div class="">
+                        <div class="pskill-container d-flex align-items-center my-2">
+                            <img src="img/teamwork.svg" class="img-fluid skills-img me-2" alt="">
+                            <p class="mb-0 fw-bold pskill-text-title">Teamwork</p>
+                        </div>
+                        <p class="mt-3 pskill-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint blanditiis, saepe, at soluta magni accusantium expedita corrupti corporis maiores.</p>
+                    </div>
+                </div>
+                <div class="col-md-5 p-skill d-none wow animate__animated animate__slideInLeft d-md-inline-block">
+                    <div class="">
+                        <div class="pskill-container d-flex align-items-center">
+                            <img src="img/emotional.svg" class="img-fluid skills-img me-2" alt="">
+                            <p class="mb-0 fw-bold pskill-text-title">Emotional Intelligence</p>
+                        </div>
+                        <p class="mt-3 pskill-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint blanditiis, saepe, at soluta magni accusantium expedita corrupti corporis maiores.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-5 p-skill d-none d-md-inline-block wow animate__animated animate__slideInRight py-2">
+                    <div class="">
+                        <div class="pskill-container d-flex align-items-center my-2">
+                            <img src="img/problem-solving.svg" class="img-fluid skills-img me-2" alt="">
+                            <p class="mb-0 fw-bold pskill-text-title">Problem Solving</p>
+                        </div>
+                        <p class="mt-3 pskill-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint blanditiis, saepe, at soluta magni accusantium expedita corrupti corporis maiores.</p>
+                    </div>
+                </div>
+                <div class="col-md-5 p-skill d-none d-md-inline-block wow animate__animated animate__slideInRight">
+                    <div class="">
+                        <div class="pskill-container d-flex align-items-center">
+                            <img src="img/creativity.svg" class="img-fluid skills-img me-2" alt="">
+                            <p class="mb-0 fw-bold pskill-text-title">Creativity</p>
+                        </div>
+                        <p class="mt-3 pskill-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint blanditiis, saepe, at soluta magni accusantium expedita corrupti corporis maiores.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 mb-4 mt-0 mt-md-5 wow animate__animated animate__fadeIn">
+                <div class="text-center">
+                    <h5 class="mb-4 mb-md-1 wskill-title">Work Skills</h5>
+                </div>
+            </div>
+            <div class="row justify-content-center pe-0 wow animate__animated animate__flipInX">
+                <div class="col-12 col-lg-8 mb-3">
+                    <small class="wskill-progress-title">HTML</small>
+                    <div class="progress" style="height: 12px;">
+                        <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">90%</div>
+                      </div>
+                </div>
+                <div class="col-12 col-lg-8 mb-3">
+                    <small class="wskill-progress-title">CSS</small>
+                    <div class="progress" style="height: 12px;">
+                        <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">85%</div>
+                      </div>
+                </div>
+                <div class="col-12 col-lg-8 mb-3">
+                    <small class="wskill-progress-title">Boostrap</small>
+                    <div class="progress" style="height: 12px;">
+                        <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">75%</div>
+                      </div>
+                </div>
+                <div class="col-12 col-lg-8 mb-3">
+                    <small class="wskill-progress-title">JavaScript</small>
+                    <div class="progress" style="height: 12px;">
+                        <div class="progress-bar" role="progressbar" style="width: 45%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">45%</div>
+                      </div>
+                </div>
+                <div class="col-12 col-lg-8 mb-3">
+                    <small class="wskill-progress-title">Adobe XD</small>
+                    <div class="progress" style="height: 12px;">
+                        <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">60%</div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- portfolio -->
+    <section id="portfolio" class="container-fluid mb-5 py-5">
+        <div class="row">
+            <div class="col-12">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-12">
+                            <div class="text-center wow animate__animated animate__fadeInDown">
+                                <p class="mb-1 mt-5 change-color-obj portfolio-title">Portfolio</p>
+                                <h5 class="portfolio-intro mb-5">My Latest Projects</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-md-6 col-lg-4 wow animate__animated animate__fadeInLeft">
+                            <div class="card mb-4 portfolio-card shadow rounded p-2">
+                                <img class="portfolio-img rounded" src="img/gym-p.png" alt="">
+                                <hr class="text-black mt-2 m-0" style="height: 1px;">
+                                <div class="card-body p-0 pt-1">
+                                    <small class="mb-0 proj-title">Gym & Fitness</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4 wow animate__animated animate__fadeInLeft">
+                            <div class="card mb-4 portfolio-card shadow rounded p-2">
+                                <img class="portfolio-img rounded" src="img/admin-dashboard.png" alt="">
+                                <hr class="text-black mt-2 m-0" style="height: 1px;">
+                                <div class="card-body p-0 pt-1">
+                                    <small class="mb-0 proj-title">Admin-dashboard</small>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-12 col-md-6 col-lg-4 wow animate__animated animate__fadeInLeft">
+                            <div class="card mb-4 portfolio-card shadow rounded p-2">
+                                <img class="portfolio-img rounded" src="img/calculator.png" alt="">
+                                <hr class="text-black mt-2 m-0" style="height: 1px;">
+                                <div class="card-body p-0 pt-1">
+                                    <small class="mb-0 proj-title">Calculator</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4 wow animate__animated animate__backInDown">
+                            <div class="card mb-4 portfolio-card shadow rounded p-2">
+                                <img class="portfolio-img rounded" src="img/foodie-p.png" alt="">
+                                <hr class="text-black mt-2 m-0" style="height: 1px;">
+                                <div class="card-body p-0 pt-1">
+                                    <small class="mb-0 proj-title">Foodie</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4 wow animate__animated animate__backInDown">
+                            <div class="card mb-4 portfolio-card shadow rounded p-2">
+                                <img class="portfolio-img rounded" src="img/exchange.png" alt="">
+                                <hr class="text-black mt-2 m-0" style="height: 1px;">
+                                <div class="card-body p-0 pt-1">
+                                    <small class="mb-0 proj-title">Exchange Calculator</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4 wow animate__animated animate__backInDown">
+                            <div class="card mb-4 portfolio-card shadow rounded p-2">
+                                <img class="portfolio-img rounded" src="img/fb-clone.png" alt="">
+                                <hr class="text-black mt-2 m-0" style="height: 1px;">
+                                <div class="card-body p-0 pt-1">
+                                    <small class="mb-0 proj-title">Facebook Clone</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- blog -->
+   <section id="blog" class="container mb-5 py-5">
+       <div class="row justify-content-center align-items-center">
+            <div class="col-12">
+                <div class="text-center wow animate__animated animate__flash">
+                    <p class="mb-1 mt-5 blog-title change-color-obj">Blog</p>
+                    <h5 class="mb-4 blog-intro mb-5">Latest Posts</h5>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="row justify-content-center align-items-center mb-5">
+                    <div class="col-12 col-lg-6 col-xl-5 wow animate__animated animate__lightSpeedInLeft">
+                        <div class="row justify-content-center">
+                            <div class="col-10 col-md-12 blog-card mb-3">
+                                <div class="row card-body flex-column flex-md-row align-items-center p-0 py-4 shadow rounded justify-content-center">
+                                    <div class="col-10 col-md-6">
+                                        <div class="">
+                                            <!-- <img src="img/fun.jpg" class="img-fluid rounded" alt=""> -->
+                                            <figure class="imghvr-hinge-up">
+                                                <img src="img/fun.jpg" class="img-fluid rounded" alt="">
+                                                <figcaption class="blog-img-hover p-2 d-flex justify-content-center align-items-center">
+                                                  <div class="d-flex flex-column justify-content-center align-content-center">
+                                                    <p class="mb-0 ih-fade-down ih-delay-sm fw-bold ">The Moral</p>
+                                                    <small class="mb-0 ih-zoom-in ih-delay-md">
+                                                      <i>If we are in good mood, we can learn a lot.</i>
+                                                    </small>
+                                                  </div>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                    <div class="col-10 col-md-6">
+                                        <div class="">
+                                            <h5 class="blog-text-title mb-2 mt-4 mt-md-0">Learn With Fun</h5>
+                                            <p class="blog-text mb-2 w-100">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                            <a href="#" class="blog-btn">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-10 col-md-12 blog-card mb-3">
+                                <div class="row card-body flex-column flex-md-row-reverse align-items-center p-0 py-4 shadow rounded flex-row-reverse justify-content-center">
+                                    <div class="col-10 col-md-6">
+                                        <div class="">
+                                            <!-- <img src="img/passion.jpg" class="img-fluid rounded" alt=""> -->
+                                            <figure class="imghvr-flip-vert">
+                                                <img src="img/passion.jpg" class="img-fluid rounded" alt="">
+                                                <figcaption class="blog-img-hover p-2 d-flex justify-content-center align-content-center">
+                                                  <div class="d-flex flex-column justify-content-center align-content-center">
+                                                      <p class="mb-0 ih-fade-down ih-delay-sm fw-bold">The Moral</p>
+                                                  <small class="mb-0 ih-zoom-in ih-delay-md">
+                                                    <i>Passion is also important in our lives.</i>
+                                                  </small>
+                                                  </div>
+                                                </figcaption>
+                                            </figure>
+                                        </div>
+                                    </div>
+                                    <div class="col-10 col-md-6">
+                                        <div class="">
+                                            <h5 class="blog-text-title mb-2 mt-4 mt-md-0"> Passion</h5>
+                                            <p class="blog-text mb-2 w-100">Lorem dsfs sdfsfsfdgd sf adipisicing sdfs esfe efdes elit.</p>
+                                            <a href="#" class="blog-btn">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-10 col-md-12 col-lg-4 col-xl-3 blog-card mx-3 me-3 wow animate__animated animate__lightSpeedInRight">
+                        <div class="row flex-column flex-md-row flex-lg-column card-body align-items-center shadow">
+                            <div class="col-10 col-md-6 col-lg-12 p-0 pe-md-4">
+                                <div class="">
+                                    <!-- <img src="img/beginner.jpg" class="img-fluid rounded" alt=""> -->
+                                    <figure class="imghvr-flip-diag-1">
+                                        <img src="img/beginner.jpg" class="img-fluid rounded" alt="">
+                                        <figcaption class="blog-img-hover p-2 d-flex justify-content-center align-items-center">
+                                          <div class="d-flex flex-column justify-content-center align-content-center">
+                                            <p class="mb-0 ih-fade-down ih-delay-sm fw-bold">The Moral</p>
+                                            <small class="mb-0 ih-zoom-in ih-delay-md">
+                                              <i>First step is always difficult, don't give up and keep moving.</i>
+                                            </small>
+                                          </div>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="col-10 col-md-6 col-lg-12 mt-2 p-0 py-2">
+                                <div class="">
+                                    <h5 class="blog-text-title mb-2 mt-4 mt-md-0">For Beginner</h5>
+                                    <p class="blog-text mb-2 w-100">Lorem ipsum dolor sit amet sit amet sit ametipsum dolor <span class="d-none d-lg-inline-block">sit amet consectetur consectetur adipisicing elit.</span></p>
+                                    <a href="#" class="blog-btn">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </div>
+
+       <!-- reviews -->
+       <div class="row pt-3">
+        <div class="col-12 wow animate__animated animate__jackInTheBox">
+            <div class="text-center">
+                <h5 class="mb-5 review-intro">What My Clients Say</h5>
+            </div>
+        </div>
+       </div>
+       <div class="row review-slick wow animate__animated animate__rotateIn">
+           <div class="col-12 col-lg-4 mb-3 mx-3">
+               <div class="p-3 rounded review-card one">
+                    <div class="d-block d-md-flex justify-content-between">
+                        <div class="d-flex align-items-center justify-content-center me-4 mb-3 mb-md-0">
+                            <img src="img/p1.jpg" class="review-img me-2" alt="">
+                            <div class="">
+                                <p class="review-name fw-bold mb-0">Kaung Si Thu</p>
+                                <small class="review-job">Client</small>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <i class="fas fa-star review-icon change-color-obj me-1"></i>
+                            <i class="fas fa-star review-icon change-color-obj me-1"></i>
+                            <i class="fas fa-star review-icon change-color-obj me-1"></i>
+                            <i class="far fa-star review-icon change-color-obj me-1"></i>
+                            <i class="far fa-star review-icon change-color-obj"></i>
+                        </div>
+                    </div>
+                    <p class="review-text mt-3 text-center text-md-start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi facilis trum sint eius quos, odit nemo. Sequi, repellendus at.</p>
+               </div>
+           </div>
+           <div class="col-12 col-lg-4 mb-3 mx-3">
+            <div class="p-3 rounded review-card two">
+                 <div class="d-block d-md-flex justify-content-between">
+                     <div class="d-flex align-items-center justify-content-center me-4 mb-3 mb-md-0">
+                         <img src="img/p2.jpg" class="review-img me-2" alt="">
+                         <div class="">
+                             <p class="review-name fw-bold mb-0">Htet Myat</p>
+                             <small class="review-job">Client</small>
+                         </div>
+                     </div>
+                     <div class="d-flex justify-content-center">
+                         <i class="fas fa-star review-icon change-color-obj me-1"></i>
+                         <i class="fas fa-star review-icon change-color-obj me-1"></i>
+                         <i class="fas fa-star review-icon change-color-obj me-1"></i>
+                         <i class="fas fa-star review-icon change-color-obj me-1"></i>
+                         <i class="fas fa-star review-icon change-color-obj"></i>
+                     </div>
+                 </div>
+                 <p class="review-text mt-3 text-center text-md-start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi facilis trum sint eius quos, odit nemo. Sequi, repellendus at.</p>
+            </div>
+        </div>
+        <div class="col-12 col-lg-4 mb-3 mx-3">
+            <div class="p-3 rounded review-card three">
+                 <div class="d-block d-md-flex justify-content-between">
+                     <div class="d-flex align-items-center justify-content-center me-4 mb-3 mb-md-0">
+                         <img src="img/p3.jpg" class="review-img me-2" alt="">
+                         <div class="">
+                             <p class="review-name fw-bold mb-0">Hein Htet S</p>
+                             <small class="review-job">Client</small>
+                         </div>
+                     </div>
+                     <div class="d-flex justify-content-center">
+                         <i class="fas fa-star review-icon change-color-obj me-1"></i>
+                         <i class="fas fa-star review-icon change-color-obj me-1"></i>
+                         <i class="fas fa-star review-icon change-color-obj me-1"></i>
+                         <i class="fas fa-star review-icon change-color-obj me-1"></i>
+                         <i class="far fa-star review-icon change-color-obj"></i>
+                     </div>
+                 </div>
+                 <p class="review-text mt-3 text-center text-md-start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi facilis trum sint eius quos, odit nemo. Sequi, repellendus at.</p>
+            </div>
+        </div>
+        <div class="col-12 col-lg-4 mb-3 mx-3">
+            <div class="p-3 rounded review-card four">
+                 <div class="d-block d-md-flex justify-content-between">
+                     <div class="d-flex align-items-center justify-content-center me-4 mb-3 mb-md-0">
+                         <img src="img/p4.jpg" class="review-img me-2" alt="">
+                         <div class="">
+                             <p class="review-name fw-bold mb-0">Ye Moe Oo</p>
+                             <small class="review-job">Client</small>
+                         </div>
+                     </div>
+                     <div class="d-flex justify-content-center">
+                         <i class="fas fa-star review-icon change-color-obj me-1"></i>
+                         <i class="fas fa-star review-icon change-color-obj me-1"></i>
+                         <i class="fas fa-star review-icon change-color-obj me-1"></i>
+                         <i class="far fa-star review-icon change-color-obj me-1"></i>
+                         <i class="far fa-star review-icon change-color-obj"></i>
+                     </div>
+                 </div>
+                 <p class="review-text mt-3 text-center text-md-start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi facilis trum sint eius quos, odit nemo. Sequi, repellendus at.</p>
+            </div>
+        </div>
+        <div class="col-12 col-lg-4 mb-3 mx-3">
+            <div class="p-3 rounded review-card five">
+                 <div class="d-block d-md-flex justify-content-between">
+                     <div class="d-flex align-items-center justify-content-center me-4 mb-3 mb-md-0">
+                         <img src="img/p5.jpg" class="review-img me-2" alt="">
+                         <div class="">
+                             <p class="review-name fw-bold mb-0">Hein Htet</p>
+                             <small class="review-job">Client</small>
+                         </div>
+                     </div>
+                     <div class="d-flex justify-content-center">
+                         <i class="fas fa-star review-icon change-color-obj me-1"></i>
+                         <i class="fas fa-star review-icon change-color-obj me-1"></i>
+                         <i class="fas fa-star review-icon change-color-obj me-1"></i>
+                         <i class="fas fa-star review-icon change-color-obj me-1"></i>
+                         <i class="far fa-star review-icon change-color-obj"></i>
+                     </div>
+                 </div>
+                 <p class="review-text mt-3 text-center text-md-start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi facilis trum sint eius quos, odit nemo. Sequi, repellendus at.</p>
+            </div>
+        </div>
+        <div class="col-12 col-lg-4 mb-3 mx-3">
+            <div class="p-3 rounded review-card six">
+                 <div class="d-block d-md-flex justify-content-between">
+                     <div class="d-flex align-items-center justify-content-center me-4 mb-3 mb-md-0">
+                         <img src="img/p6.jpg" class="review-img me-2" alt="">
+                         <div class="">
+                             <p class="review-name fw-bold mb-0">Kaung Htet S</p>
+                             <small class="review-job">Client</small>
+                         </div>
+                     </div>
+                     <div class="d-flex justify-content-center">
+                         <i class="fas fa-star review-icon change-color-obj me-1"></i>
+                         <i class="fas fa-star review-icon change-color-obj me-1"></i>
+                         <i class="fas fa-star review-icon change-color-obj me-1"></i>
+                         <i class="fas fa-star review-icon change-color-obj me-1"></i>
+                         <i class="fas fa-star review-icon change-color-obj"></i>
+                     </div>
+                 </div>
+                 <p class="review-text mt-3 text-center text-md-start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi facilis trum sint eius quos, odit nemo. Sequi, repellendus at.</p>
+            </div>
+        </div>
+       </div>
+   </section>
+
+   <!-- contact -->
+   <section id="contact" class="container-fluid py-5">
+        <div class="row">
+            <div class="col-12">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 wow animate__animated animate__fadeInDown">
+                            <div class="text-center">
+                                <p class="mb-1 mt-5 change-color-obj contact-title">Contact</p>
+                                <h5 class="contact-intro mb-3">Get In Touch</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-lg-evenly mt-5 py-1 flex-column-reverse flex-lg-row">
+                        <div class="col-12 col-lg-3 wow animate__animated animate__fadeInLeft">
+                            <div class="row justify-content-center mb-3 mb-lg-0 mt-5 mt-lg-0">
+                                <div class="col-12 col-lg-3">
+                                    <div class="row">
+                                        <div class="col-12 col-md-6 col-lg-12 mb-4 d-flex justify-content-md-center justify-content-lg-start">
+                                            <div class="d-flex px-2 px-md-0 align-items-center">
+                                                <i class="fas fa-phone-alt contact-icon change-color-obj me-3" style="font-size: 25px;"></i>
+                                                <div class="">
+                                                    <p class="contact-name fw-bold mb-0">Phone</p>
+                                                    <small class="contact-desc">0912345678</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-6 col-lg-12 mb-4 d-flex justify-content-md-center justify-content-lg-start">
+                                            <div class="d-flex px-2 px-md-0 align-items-center">
+                                                <i class="fas fa-envelope contact-icon change-color-obj me-3" style="font-size: 25px;"></i>
+                                                <div class="">
+                                                    <p class="contact-name fw-bold mb-0">Email</p>
+                                                    <small class="contact-desc">zzz@email.com</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-112col-md-12 col-lg-12 mb-4 d-flex justify-content-md-center justify-content-lg-start">
+                                            <div class="d-flex  px-2 px-md-0align-items-center">
+                                                <i class="fas fa-map-marker-alt contact-icon change-color-obj me-3" style="font-size: 25px;"></i>
+                                                <div class="">
+                                                    <p class="contact-name fw-bold mb-0">Location</p>
+                                                    <small class="contact-desc">somewhere, Myanmar</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-10 col-lg-6 ps-md-5 ps-lg-0 ms-md-5 ms-lg-0 wow animate__animated animate__fadeInRight">
+                            <div class="row justify-content-start mb-3">
+                                <div class="col-6 col-lg-5">
+                                    <div class="">
+                                        <input type="text" class="contact-input shadow-sm w-100" placeholder="Name">
+                                    </div>
+                                </div>
+                                <div class="col-6 col-lg-5 ps-2">
+                                    <div class="">
+                                        <input type="email" class="contact-input shadow-sm w-100" placeholder="Email">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row justify-content-start mb-3">
+                                <div class="col-12 col-lg-10">
+                                    <div class="d-flex">
+                                        <input type="email" class="contact-input shadow-sm w-100" placeholder="Project">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row justify-content-start mb-3">
+                                <div class="col-12 col-lg-10">
+                                    <div class="">
+                                        <textarea name="" class="contact-input shadow-sm w-100" style="border-radius: 20px;" id="" cols="30" rows="5" placeholder="Message"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row justify-content-start mb-3">
+                                <div class="col-12 col-lg-10">
+                                    <div class="">
+                                        <button class="contact-btn shadow-sm">Send Message</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+   </section>
+
+   <button class="change-mode wow animate__animated animate__fadeInUp d-flex justify-content-center align-items-center" onclick="changeMode()"><i class="fas fa-moon" id="modeIcon"></i></button>
+   <button class="change-color wow animate__animated animate__rollIn"><i class="fas fa-cog fa-spin text-primary"></i></button>
+   <div class="color-display wow animate__animated animate__fadeIn p-1">
+    <button class="mb-2 mt-1 red"></button>
+    <button class="mb-2 green"></button>
+    <button class="mb-2 blue"></button>
+    <button class="mb-2 warning"></button>
+   </div>
+    
+    <script src="js/jquery.js"></script>
+    <script src="vendor/way_point/lib/jquery.waypoints.min.js"></script>
+    <script src="vendor/boostrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/"></script>
+    <!-- <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/jquery-migrate-1.2.1.min.js"></script> -->
+    <script src="js/slick.min.js"></script>
+    <script src="vendor/wow/wow.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>

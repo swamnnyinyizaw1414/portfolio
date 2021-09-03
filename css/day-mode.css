@@ -1,0 +1,189 @@
+:root{
+    --text-white-50: #939495;
+}
+
+body.day-mode{
+    background-color: #fff!important;
+}
+
+/* nav */
+.day-mode .header{
+    background-color: #ffffffb1;
+}
+.day-mode .nav-link{
+    color: #000 !important;
+}
+
+/* home */
+.day-mode .home-profile {
+    border: 10px solid #e9e9e9;
+    box-shadow: none!important;
+ }
+.day-mode .home-title{
+    color: #000;
+}
+.day-mode .home-job{
+    color: var(--text-black-50);
+}
+
+/* about */
+.day-mode #about{
+    background-color: #e9e9e9;
+}
+.day-mode .about-intro{
+    color: #000;
+}
+.day-mode .about-text{
+    color: #000;
+}
+
+/* services */
+.day-mode #services{
+    background-color: #e9e9e9;
+}
+.day-mode .services-intro{
+    color: #000;
+}
+.day-mode .services-card{
+    background-color: #fff;
+    border: none;
+}
+.day-mode .services-text-title{
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+}
+.day-mode .services-text{
+  color: #939495;
+  text-align: center;
+}
+
+/* skills */
+.day-mode .p-skill{
+    border-color: #fff;
+}
+.day-mode .pskill-title{
+    color: #000;
+}
+.day-mode .p-skill:hover{
+    border-color: #D02FA4;
+}
+.day-mode .pskill-text-title{
+    color: #000;
+}
+.day-mode .pskill-text{
+    color: #939495;
+}
+.day-mode .wskill-title{
+    color: #000;
+}
+.day-mode .wskill-progress-title{
+    color: #000;
+}
+.p-skill.pskill-red:hover{
+    border: 2px solid red;
+  }
+
+/* portfolio */
+.day-mode #portfolio{
+    background-color: #e9e9e9;
+}
+.day-mode .portfolio-intro{
+    color: #000;
+}
+.day-mode .portfolio-card{
+    border: none!important;
+    background-color: #fff!important;
+}
+.day-mode .proj-title{
+    color: #000;
+}
+
+/* blog */
+.day-mode .blog-card{
+    border: none !important;
+}
+.day-mode .blog-intro{
+    color: #000;
+}
+.day-mode .blog-text-title{
+    color: #000;
+}
+.day-mode .blog-text{
+    color: #939495;
+}
+.day-mode .blog-btn{
+    color: #000;
+}
+.day-mode .blog-card:hover{
+    transform: scale(0.9);
+    transition: 0.4s;
+}
+.day-mode .blog-card.blog-red:hover{
+    border: none !important;
+}
+.day-mode .blog-card.blog-green:hover{
+    border: none !important;
+}
+.day-mode .blog-card.blog-info:hover{
+    border: none !important;
+}
+.day-mode .blog-card.blog-warning:hover{
+    border: none !important;
+}
+
+/* reviews */
+.day-mode .review-intro{
+    color: #000;
+}
+.day-mode .review-name{
+    color: #000;
+}
+.day-mode .review-job{
+    color: #939495;
+}
+.day-mode .review-text{
+    color: #939495;
+}
+.day-mode .review-card{
+    border-bottom: 2px solid #fff;
+    transition: 0.4s;
+}
+.review-card:hover{
+    border-bottom: 2px solid #D02FA4;
+} 
+
+/* contact */
+.day-mode .contact-name{
+    color: #000;
+}
+.day-mode .contact-intro{
+    color: #000;
+}
+.day-mode .contact-desc{
+    color: #939495;
+}
+.day-mode .contact-input{
+    background-color: #fff;
+    outline: none;
+    border: none !important;
+    border-radius: 50px;
+    padding: 6px 15px;
+    color: #000;
+}
+.day-mode .contact-input:focus{
+    box-shadow: none!important;
+    border: 1px solid #000;
+}
+.day-mode .contact-btn{
+    background-color: #fff;
+    border: none !important;
+    border-radius: 50px;
+    color:#000; 
+}
+.day-mode #contact{
+    background-color: #e9e9e9;
+}
+.day-mode .fa-moon{
+    color: #f7bc09;
+}
